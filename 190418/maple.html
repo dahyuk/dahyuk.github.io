@@ -1,0 +1,48 @@
+
+<!doctype html> <!-- maple.html -->
+
+<html><head><meta charset="utf-8"/><meta name="viewport"content="width=device-width,initial-scale=1"/>
+
+<title>폼 과제</title>
+
+<script>
+function genre(obj) {
+var movie_a = ["히어로", "팔라딘", "다크나이트"];
+var movie_b =  ["불독", "썬콜", "비숍"];
+var movie_c = ["신궁", "보우마스터", "패스파인더"];
+var movie_d =  ["섀도어", "나이트로드", "듀얼블레이드"];
+var movie_e = ["캡틴", "바이퍼", "캐논슈터"];
+var target = document.getElementById("moviex");
+ if(obj.value == "a") var k = movie_a;
+else if(obj.value == "b") var k = movie_b;
+else if(obj.value == "c") var k = movie_c;
+else if(obj.value == "d") var k = movie_d;
+target.options.length = 0;
+for (x in k) {
+var opt = document.createElement("option");
+opt.value = k[x];
+opt.innerHTML = k[x];
+target.appendChild(opt);
+    }
+    }
+</script>
+
+</head>
+<body>
+<section>
+<fieldset>
+<legend>메이플스토리 모험가 직업</legend>
+<label for="genrex">직업</label>
+<select id="genrex" name="moviegenre" onchange ="genre(this)">
+<option value="a"selected>전사</option>
+<option value="b">마법사</option>
+<option value="c">궁수</option>
+<option value="d">도적</option>
+<option value="e">해적</option></select>
+<label for="movie">종류</label>
+<select id="moviex" name="movie"></select>
+</fieldset>
+</section>
+</body>
+</html>
+
