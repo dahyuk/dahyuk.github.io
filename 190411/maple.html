@@ -19,6 +19,7 @@ else if(obj.value == "b") var k = movie_b;
 else if(obj.value == "c") var k = movie_c;
 else if(obj.value == "d") var k = movie_d;
 else if(obj.value == "e") var k = movie_e;
+else if(obj.value == "f") var k = movie_f;
 target.options.length = 0;
 for (x in k) {
 var opt = document.createElement("option");
@@ -36,7 +37,7 @@ target.appendChild(opt);
 <legend>메이플스토리 모험가 직업</legend>
 <label for="genrex">직업</label>
 <select id="genrex" name="moviegenre" onchange ="genre(this)">
-<option value="b"selected>직업을 고르세요</option>
+<option value="a"selected>직업을 고르세요</option>
 <option value="b">전사</option>
 <option value="c">마법사</option>
 <option value="d">궁수</option>
